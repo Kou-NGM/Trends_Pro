@@ -3,14 +3,40 @@
 ## 概要
 Trends_Proは、Instagramのハッシュタグ検索を自動化し、結果を可視化するPythonアプリケーションです。ユーザーが指定したハッシュタグの投稿数を取得し、結果をCSVファイルとして保存します。また、結果を棒グラフとして可視化し、画像として保存します。入力した単語はGoogle Trends分析にてシームレスに分析することが可能です。
 
-## インストール方法
-1. このリポジトリをクローンまたはダウンロードします。
-2. 必要なPythonパッケージをインストールします。これには、`tkinter`、`selenium`、`pandas`、`matplotlib`などが含まれます。
+
+## 環境設定・インストール（Setting Up Your Environment）
+まず最初に、このプロジェクトを実行するためにはPythonが必要です。Pythonは公式ウェブサイトからダウンロード可能です。このプロジェクトはPython 3.7以上で動作します。
+
+ファイルを解凍後はコマンドプロンプト(Windows)やターミナル(Mac)を開き`cd`コマンドで解凍したファイルのパスに移動します。
+```
+cd /*解凍したファイルのパス*/
+```
+
+次にPythonのパッケージマネージャであるpipを使用して、必要なPythonライブラリをインストールする必要があります。以下のコマンドを使用してライブラリをインストールできます。以下の動作が必要なのは初回時のみで２回目に実行するときは必要ありません!!
+
+Firstly, you will need Python to run this project. You can download Python from the official website. This project works with Python 3.7 and above.
+
+Next, you'll need to install the necessary Python libraries using pip, which is Python's package manager. You can install the libraries using the following command:
+
 ```
  pip install selenium webdriver_manager pandas matplotlib openpyxl pillow
 ```
 
-3. ChromeDriverをダウンロードし、システムパスに追加します。
+
+
+
+## 実行（Running the Program）
+必要なソフトウェアとライブラリがインストールされていることを確認したら、以下のステップでプロジェクトをセットアップします：
+
+1. このリポジトリをクローンまたはダウンロードします。
+2. ターミナルを開き、リポジトリのディレクトリに移動します。
+3. `python app.py` を実行して、スクリプトを起動します。
+
+You can run the program from the command line as follows:
+
+```
+python app.py
+```
 
 ## 使用方法
 1. `app.py`を実行します。これにより、アプリケーションのGUIが開きます。
