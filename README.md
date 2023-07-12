@@ -30,7 +30,7 @@ Next, you'll need to install the necessary Python libraries using pip, which is 
 
 1. このリポジトリをクローンまたはダウンロードします。
 2. ターミナルを開き、リポジトリのディレクトリに移動します。
-3. `python app.py` を実行して、スクリプトを起動します。
+3. `python app.py` を実行して、スクリプトを起動します。初回は起動に時間がかかります。
 
 You can run the program from the command line as follows:
 
@@ -39,7 +39,7 @@ python app.py
 ```
 
 ## 使用方法
-1. `app.py`を実行します。これにより、アプリケーションのGUIが開きます。
+1. `app.py`を実行します。これにより、アプリケーションのGUIが開きます。初回は起動に時間がかかります。
 2. GUIを使用して、検索したいハッシュタグを入力します。
 3. 「検索」ボタンをクリックします。アプリケーションはInstagramのハッシュタグ検索を自動的に実行し、結果をCSVファイルとして保存します。
 4. 「結果を表示」ボタンをクリックすると、結果の棒グラフが表示されます。
