@@ -5,7 +5,7 @@ Trends_Proは、Instagramのハッシュタグ検索を自動化し、結果を�
 
 ## インストール方法
 1. このリポジトリをクローンまたはダウンロードします。
-2. 必要なPythonパッケージをインストールします。これには、`tkinter`、`selenium`、`pandas`、`matplotlib`などが含まれます。"""pip install selenium webdriver_manager pandas matplotlib openpyxl pillow"""
+2. 必要なPythonパッケージをインストールします。これには、`tkinter`、`selenium`、`pandas`、`matplotlib`などが含まれます。```pip install selenium webdriver_manager pandas matplotlib openpyxl pillow```
 
 3. ChromeDriverをダウンロードし、システムパスに追加します。
 
