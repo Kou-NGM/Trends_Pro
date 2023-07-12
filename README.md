@@ -1,7 +1,7 @@
 # Trends_Pro
 
 ## 概要
-Trends_Proは、Instagramのハッシュタグ検索を自動化し、結果を可視化するPythonアプリケーションです。ユーザーが指定したハッシュタグの投稿数を取得し、結果をCSVファイルとして保存します。また、結果を棒グラフとして可視化し、画像として保存します。
+Trends_Proは、Instagramのハッシュタグ検索を自動化し、結果を可視化するPythonアプリケーションです。ユーザーが指定したハッシュタグの投稿数を取得し、結果をCSVファイルとして保存します。また、結果を棒グラフとして可視化し、画像として保存します。入力した単語はGoogle Trends分析にてシームレスに分析することが可能です。
 
 ## インストール方法
 1. このリポジトリをクローンまたはダウンロードします。
@@ -25,7 +25,7 @@ Trends_Proは、Instagramのハッシュタグ検索を自動化し、結果を�
 # Trends_Pro
 
 ## Overview
-Trends_Pro is a Python application that automates Instagram hashtag searches and visualizes the results. It fetches the number of posts for user-specified hashtags and saves the results as a CSV file. It also visualizes the results as a bar chart and saves it as an image.
+Trends_Pro is a Python application that automates Instagram hashtag searches and visualizes the results. It fetches the number of posts for user-specified hashtags and saves the results as a CSV file. It also visualizes the results as a bar chart and saves it as an image.The entered words can be seamlessly analyzed by Google Trends analysis.
 
 ## Installation
 1. Clone or download this repository.
