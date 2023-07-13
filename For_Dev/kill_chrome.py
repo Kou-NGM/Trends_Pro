@@ -5,7 +5,7 @@ import subprocess
 
 def kill_chrome_driver():
     if os.name == 'nt':  # For Windows
-        os.system('taskkill /f /im chromedriver.exe /T')
+        os.system('taskkill /f /im chromedriver.exe /T >nul 2>&1')
     else:  # For Linux and Mac
         p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
         out, err = p.communicate()

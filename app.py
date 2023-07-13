@@ -10,6 +10,8 @@ import threading  # new import
 import os
 import pandas as pd
 import subprocess
+import sys
+import os
 
 
 class Application:
@@ -41,11 +43,20 @@ class Application:
         print(status)
 
 
+
+
+    def get_base_dir(self):  # add 'self' here
+        if getattr(sys, 'frozen', False):
+            # we are running in a bundle
+            return os.path.dirname(sys.executable)
+        else:
+            return os.path.dirname(os.path.abspath(__file__))
+
     def on_window_close(self):
         # Close Selenium browser when window is closed
         self.browser_driver.driver.quit()
         # Run the kill_chrome.py script
-        script_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "For_Dev", "kill_chrome.py")
+        script_path = os.path.join(self.get_base_dir(), "For_Dev", "kill_chrome.py")  # use 'self.' here
         subprocess.run(["python", script_path])
         # Then destroy the window
         self.root.destroy()
