@@ -5,7 +5,7 @@ import pandas as pd  # new import
 import matplotlib.pyplot as plt  # new import
 import matplotlib.colors as mcolors  # new import
 from app.window5 import Window5  # Add this line
-import webbrowser  # new import
+
 
 class FourthWindow:
     def __init__(self, root, total_posts, sorted_results_path, instagram_search, back_callback):

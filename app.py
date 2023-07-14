@@ -6,12 +6,11 @@ from app.window3 import ThirdWindow
 from app.window4 import FourthWindow
 from app.window5 import Window5  # new import
 from app.logi import InstagramHashtagSearch, BrowserDriver
-import threading  # new import
-import os
+import threading
 import pandas as pd
 import subprocess
-import sys
 import os
+import signal
 
 
 class Application:
@@ -45,19 +44,25 @@ class Application:
 
 
 
-    def get_base_dir(self):  # add 'self' here
-        if getattr(sys, 'frozen', False):
-            # we are running in a bundle
-            return os.path.dirname(sys.executable)
-        else:
-            return os.path.dirname(os.path.abspath(__file__))
+    def kill_chrome_driver(self):
+        if os.name == 'nt':  # For Windows
+            os.system('taskkill /f /im chromedriver.exe /T >nul 2>&1')
+        else:  # For Linux and Mac
+            p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
+            out, err = p.communicate()
+            for line in out.splitlines():
+                if b'chromedriver' in line:
+                    pid = int(line.split(None, 1)[0])
+                    os.kill(pid, signal.SIGKILL)
+
+
+
 
     def on_window_close(self):
         # Close Selenium browser when window is closed
         self.browser_driver.driver.quit()
-        # Run the kill_chrome.py script
-        script_path = os.path.join(self.get_base_dir(), "For_Dev", "kill_chrome.py")  # use 'self.' here
-        subprocess.run(["python", script_path])
+        # Run the kill_chrome function
+        self.kill_chrome_driver()  # Call the function directly
         # Then destroy the window
         self.root.destroy()
 

@@ -17,7 +17,7 @@ import sys
 from matplotlib import font_manager
 import matplotlib.colors as mcolors
 import datetime
-import openpyxl
+
 
 
 class BrowserDriver:
