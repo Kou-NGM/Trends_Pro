@@ -12,7 +12,7 @@ Trends_Proは、Instagramのハッシュタグ検索を自動化し、結果を�
 cd /*解凍したファイルのパス*/
 ```
 
-次にPythonのパッケージマネージャであるpipを使用して、必要なPythonライブラリをインストールする必要があります。以下のコマンドを使用してライブラリをインストールできます。以下の動作が必要なのは初回時のみで２回目に実行するときは必要ありません!!
+次にPythonのパッケージマネージャであるpipを使用して、必要なPythonライブラリをインストールする必要があります。以下のコマンドを使用してライブラリをインストールできます。以下の動作が必要なのは初回時のみで２回目に実行するときは必要ありません。
 
 Firstly, you will need Python to run this project. You can download Python from the official website. This project works with Python 3.7 and above.
 
